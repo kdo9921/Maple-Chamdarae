@@ -24,6 +24,7 @@ body {
 nav {
     display: fixed;
     text-align: right;
+    margin-right: env(safe-area-inset-right);
 }
 nav li {
     display: inline;
