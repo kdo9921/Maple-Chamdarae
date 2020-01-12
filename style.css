@@ -1,10 +1,11 @@
 
-html {
+body {
     height: 100%;
     background: url("./img/background.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     overflow: visible;
     overflow-y: auto;
     overflow-x: hidden;
@@ -23,10 +24,11 @@ nav li {
     font-size: 20px;
     margin-right: 10px;
 }
-nav li:hover {
+nav li:active {
     color: #999999;
 }
 #home {
+    display: block;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -115,5 +117,27 @@ nav li:hover {
     }
     #home {
         margin-top : calc(50vh - 30% - 110px);
+    }
+}
+@media all and (max-height: 600px) {
+    #avatar {
+        width: 50vh;
+    }
+    #home {
+        margin-top: 6.7vh;
+    }
+    #name {
+        font-size: 8vh;
+    }
+    #bio {
+        font-size: 3.3vh;
+    }
+    #about {
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+    nav ul {
+        margin-top: 2.6vh;
+        margin-bottom: 2.6vh;
     }
 }
