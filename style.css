@@ -75,6 +75,7 @@ nav li:active {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
     width: 890px;
     margin-top: 70px;
+    margin-bottom: 60px;
     text-align: left;
     padding: 30px;
     margin-top: calc(50vh - 270px);
@@ -104,7 +105,7 @@ nav li:active {
 }
 @media all and (max-width: 1000px) {
     #about {
-        width: calc(95% - 60px);
+        width: calc(95% - 60px - env(safe-area-inset-left) - env(safe-area-inset-right));
     }
 }
 @media all and (max-width: 500px) {
