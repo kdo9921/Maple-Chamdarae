@@ -126,7 +126,7 @@ nav li:active {
         font-size : 10vw;
     }
     #home {
-        margin-top : calc(50vh - 30% - 110px);
+        margin-top : calc(50vh - 30% - 130px);
     }
 }
 @media all and (max-height: 600px) {
