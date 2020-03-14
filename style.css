@@ -67,7 +67,15 @@ body {
 .card h1, .card h2 {
     margin: 15px 0;
 }
+.card:hover {
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    background-color: #f0f0f0;
+}
+.card h2 {
+    color: #555555;
+}
 #about a, a:visited {text-decoration: none; color: #000000;}
+#about a:hover {color: yellowgreen;}
 #about span {
     color: yellowgreen;
     font-size: 22px;
@@ -86,6 +94,9 @@ body {
     }
     #home {
         margin-top : calc(50vh - 30% - 130px);
+    }
+    #home {
+        margin-bottom : 20vw;
     }
 }
 @media all and (max-height: 600px) {
