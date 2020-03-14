@@ -104,7 +104,7 @@ body {
         width: 50vh;
     }
     #home {
-        margin-top: 6.7vh;
+        margin-top: calc(6.7vh + 20px);
     }
     #name {
         font-size: 8vh;
