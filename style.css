@@ -64,22 +64,24 @@ body {
     text-align: left;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
 }
-.card h1, .card h2 {
-    margin: 15px 0;
-}
 .card:hover {
     box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
     background-color: #f0f0f0;
 }
+.card h1 {
+    display: inline-block;
+    margin: 15px 0;
+}
 .card h2 {
     color: #555555;
+    margin: 15px 0;
 }
 #about a, a:visited {text-decoration: none; color: #000000;}
 #about a:hover {color: yellowgreen;}
 #about span {
-    color: yellowgreen;
-    font-size: 22px;
+    font-size: 1.5em;
     font-weight: 600;
+    color: #666666
 }
 
 @media all and (max-width: 500px) {

@@ -1,0 +1,21 @@
+import requests
+from bs4 import BeautifulSoup
+req = requests.get('https://maple.gg/u/apteryxchan')
+html = req.text
+soup = BeautifulSoup(html, 'html.parser')
+basic_info = soup.select('.user-summary-item')
+level = str(basic_info[0]).replace('<li class="user-summary-item">Lv.','').replace('</li>','')
+popular = str(basic_info[2]).replace('<li class="user-summary-item"><span>인기도</span>\n<span>','').replace('</span></li>','')
+mureung_floor = (str(soup.select('.user-summary-floor')[0]).replace('<h1 class="user-summary-floor font-weight-bold">',''))[:2]
+mureung_time = str(soup.select('.user-summary-duration')[0]).replace('<small class="user-summary-duration">','').replace('</small>','')
+ranking = soup.select('.user-additional > div')
+rank_world = str(ranking[2]).replace('<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-3">\n<b>월드랭킹</b><br/>\n<span>','').replace('</span>\n</div>','')
+rank_world_job = str(ranking[3]).replace('<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-3">\n<b>직업랭킹(월드)</b><br/>\n<span>','').replace('</span>\n</div>','')
+rank_job = str(ranking[4]).replace('<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-3">\n<b>직업랭킹(전체)</b><br/>\n<span>','').replace('</span>\n</div>','')
+union_tier = str(soup.select('.user-summary-tier-string')[0]).replace('<div class="user-summary-tier-string font-weight-bold">','').replace('</div>','')
+union_level = str(soup.select('.user-summary-level')[0]).replace('<span class="user-summary-level">Lv.','').replace('</span>','')
+
+datajs = open('./data.js', 'w', encoding='utf8')
+data_str = 'var data = {\n\tlevel : "' + level + '",\n\tpopular : "' + popular + '",\n\tmureung_floor : "' + mureung_floor + '",\n\tmureung_time : "' + mureung_time + '",\n\trank_world : "' + rank_world + '",\n\trank_world_job : "' + rank_world_job + '",\n\trank_job : "' + rank_job + '",\n\tunion_tier : "' + union_tier + '",\n\tunion_level : "' + union_level + '"\n};'
+datajs.write(data_str)
+datajs.close()

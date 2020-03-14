@@ -1,23 +1,11 @@
-isCurrentIsHome = true;
-function HomeToAbout() {
-    if(!isCurrentIsHome) {
-        return 0;
-    }
-    animateCSS('#home', 'bounceOutLeft', function() {
-        document.getElementById("home").style.display ='none';
-        document.getElementById("about").style.display ='inline-block';
-        animateCSS('#about', 'bounceInRight');
-    });
-    isCurrentIsHome = false;
-}
-function AboutToHome() {
-    if(isCurrentIsHome) {
-        return 0;
-    }
-    animateCSS('#about', 'bounceOutRight', function() {
-        document.getElementById("about").style.display ='none';
-        document.getElementById("home").style.display ='inline-block';
-        animateCSS('#home', 'bounceInLeft');
-    });
-    isCurrentIsHome = true;
+function init() {
+    document.getElementById('level').innerHTML = data.level;
+    document.getElementById('union_tier').innerHTML = data.union_tier;
+    document.getElementById('union_level').innerHTML = "(" + data.union_level + ")";
+    document.getElementById('rank_world').innerHTML = data.rank_world;
+    document.getElementById('rank_world_job').innerHTML = data.rank_world_job;
+    document.getElementById('rank_job').innerHTML = data.rank_job;
+    document.getElementById('mureung_floor').innerHTML = data.mureung_floor + "층";
+    document.getElementById('mureung_time').innerHTML = "(" + data.mureung_time + ")";
+    document.getElementById('popular').innerHTML = data.popular; 
 }
