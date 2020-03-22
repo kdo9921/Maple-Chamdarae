@@ -17,7 +17,7 @@ body {
 #avatar {
     width: 300px;
     border-radius: 50%;
-    border: solid yellowgreen 5px;
+    border: solid skyblue 5px;
     background-color: #eeeeee;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
 }
@@ -73,7 +73,7 @@ body {
     margin: 15px 0;
 }
 #about a, a:visited {text-decoration: none; color: #000000;}
-#about a:hover {color: yellowgreen;}
+#about a:hover {color: skyblue;}
 #about span {
     font-size: 1.5em;
     font-weight: 600;
