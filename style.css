@@ -1,10 +1,16 @@
 body {
     margin:0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#background {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    position: fixed;
     background: url("./img/background.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: Arial, Helvetica, sans-serif;
 }
 #home {
     display: block;
@@ -16,7 +22,7 @@ body {
 #avatar {
     width: 300px;
     border-radius: 50%;
-    border: solid skyblue 5px;
+    border: solid #9370DB 5px;
     background-color: #eeeeee;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
 }
@@ -72,7 +78,7 @@ body {
     margin: 15px 0;
 }
 #about a, a:visited {text-decoration: none; color: #000000;}
-#about a:hover {color: skyblue;}
+#about a:hover {color: #9370DB;}
 #about span {
     font-size: 1.5em;
     font-weight: 600;
