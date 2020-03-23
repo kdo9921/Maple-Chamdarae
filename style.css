@@ -1,6 +1,6 @@
 body {
     margin:0;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 #background {
     width: 100vw;
@@ -41,7 +41,7 @@ body {
     text-align: center;
     margin: 8px 0 0 0;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
 }
 #about {
     display: flex;
