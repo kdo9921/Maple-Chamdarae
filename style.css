@@ -24,7 +24,6 @@ body {
 }
 #avatar {
     width: 300px;
-    min-height: 300px;
     border-radius: 50%;
     border: solid skyblue 5px;
     background-color: #eeeeee;
@@ -88,7 +87,6 @@ body {
 @media all and (max-width: 500px) {
     #avatar {
         width: 60%;
-        min-width: 60vw;
     }
     #bio {
         font-size : 4vw;
