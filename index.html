@@ -16,57 +16,71 @@
     <meta property="og:image" content="./img/ApteryxChan.png" />
     <title>ApteryxChan@엘리시움</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./weather/fog/fog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
     <link rel="apple-touch-icon-precomposed" href="./img/ApteryxChan.png" />
     <link rel="shortcut icon" href="./img/ApteryxChan_ingame.png">
     <script type="text/javascript" src="./data.js"></script>
     <script type="text/javascript" src="./main.js"></script>
 </head>
 <body onload="init()">
-    <div id="background"></div>
+    <div id="background" class="fogwrapper"></div>
+    <div id="foglayer_01" class="fog">
+        <div class="image01"></div>
+        <div class="image02"></div>
+     </div>
+     <div id="foglayer_02" class="fog">
+        <div class="image01"></div>
+        <div class="image02"></div>
+     </div>  
+     <div id="foglayer_03" class="fog">
+        <div class="image01"></div>
+        <div class="image02"></div>
+     </div>
     <div id="home">
         <a href="https://maple.gg/u/apteryxchan" class="hvr-grow-rotate"><img src="./img/ApteryxChan.png" id="avatar" class="animated jackInTheBox"></a>
 	    <h1 id="name" class="animated zoomInUp">ApteryxChan</h1>
 	    <p id="bio" class="animated fadeInUpBig"></p>
     </div>
     <div id="about" class="animated bounceInUp slower">
-        <div class="card">
+        <div class="card hvr-grow">
             <h2 class="card_title">레벨</h2>
             <h1 id="level"></h1>
         </div>
-        <div class="card">
+        <div class="card hvr-grow">
             <h2 class="card_title">직업</h2>
             <h1>보우마스터</h1>
         </div>
-        <div class="card">
+        <div class="card hvr-grow">
             <h2 class="card_title">서버</h2>
             <h1>엘리시움</h1>
         </div>
-        <div class="card">
+        <div class="card hvr-grow">
             <h2 class="card_title">월드랭킹</h2>
             <h1 id="rank_world"></h1>
         </div>
-        <div class="card">
+        <div class="card hvr-grow">
             <h2 class="card_title">직업랭킹</h2>
             <h1 id="rank_job"></h1>
         </div>
-        <div class="card">
+        <div class="card hvr-grow">
             <h2 class="card_title">월드 직업랭킹</h2>
             <h1 id="rank_world_job"></h1>
         </div>
-        <div class="card">
+        <div class="card hvr-grow">
             <h2 class="card_title">인기도</h2>
             <h1 id="popular"></h1>
         </div>
-        <div class="card">
+        <div class="card hvr-grow">
             <h2 class="card_title">길드</h2>
             <h1><a href="https://maple.gg/guild/elysium/%EC%97%90%EB%9D%A0">에띠</a></h1>
         </div>
-        <div class="card">
+        <div class="card hvr-grow">
             <h2 class="card_title">유니온</h2>
             <h1 id="union_tier"></h1> <span id="union_level" class="sub"></span>
         </div>
-        <div class="card">
+        <div class="card hvr-grow">
             <h2 class="card_title">무릉 최고기록</h2>
             <h1 id="mureung_floor"></h1> <span id="mureung_time" class="sub"></span>
         </div>

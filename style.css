@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin:0;
     font-family: Helvetica, Arial, sans-serif;
@@ -21,8 +24,9 @@ body {
 }
 #avatar {
     width: 300px;
+    min-height: 300px;
     border-radius: 50%;
-    border: solid #9370DB 5px;
+    border: solid skyblue 5px;
     background-color: #eeeeee;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
 }
@@ -63,11 +67,7 @@ body {
     min-width: 80px;
     color: #000000;
     text-align: left;
-    box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
-}
-.card:hover {
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
-    background-color: #f0f0f0;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.4) !important; 
 }
 .card h1 {
     display: inline-block;
@@ -88,6 +88,7 @@ body {
 @media all and (max-width: 500px) {
     #avatar {
         width: 60%;
+        min-width: 60vw;
     }
     #bio {
         font-size : 4vw;
