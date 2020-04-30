@@ -7,6 +7,7 @@ function init() {
     document.getElementById('rank_world').innerHTML = data.rank_world;
     document.getElementById('rank_world_job').innerHTML = data.rank_world_job;
     document.getElementById('rank_job').innerHTML = data.rank_job;
+    document.getElementById('guild').innerHTML = data.guild;
     document.getElementById('mureung_floor').innerHTML = data.mureung_floor + "층";
     document.getElementById('mureung_time').innerHTML = "(" + data.mureung_time + ")";
     document.getElementById('popular').innerHTML = data.popular; 
