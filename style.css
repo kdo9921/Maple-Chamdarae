@@ -51,15 +51,17 @@ body {
     max-width: 700px;
     margin: auto;
     flex-wrap: wrap;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     flex-basis: auto;
     padding: 10px;
 }
-.card {
-    border-radius: 4px;
+.cardItem {
     justify-content: center;
     flex-grow: 1;
     flex-shrink: 1;
+}
+.card {
+    border-radius: 4px;
     background-color: #ffffff;
     margin: 10px;
     padding: 5px 20px;
@@ -83,6 +85,34 @@ body {
     font-weight: 600;
     color: #666666
 }
+
+
+
+
+.weapon_wrap{
+    width:420px; 
+    height:504px; 
+    float:left; 
+    background:url('https://ssl.nx.com/s2/game/maplestory/renewal/common/char_info/weapon_bg.png') left top no-repeat; 
+    margin-top:40px;
+}
+.item_pot {
+    width: 100%;
+    float: left;
+}
+.item_pot li {
+    width: 82px;
+    height: 82px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    float: left;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 82px;
+    list-style-type : none;
+}
+
 
 @media all and (max-width: 500px) {
     #avatar {
