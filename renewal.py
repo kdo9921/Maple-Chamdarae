@@ -18,7 +18,7 @@ rank_job = str(ranking[4]).replace('<div class="col-lg-2 col-md-4 col-sm-4 col-6
 union_tier = str(soup.select('.user-summary-tier-string')[0]).replace('<div class="user-summary-tier-string font-weight-bold">','').replace('</div>','')
 union_level = str(soup.select('.user-summary-level')[0]).replace('<span class="user-summary-level">Lv.','').replace('</span>','')
 
-path = os.path.dirname(__file__)
+path = os.path.dirname(os.path.abspath(__file__))
 if os.path.isfile(path + '/data.js'):
     os.remove(path + '/data.js')
 datajs = open(path + '/data.js', 'w', encoding='utf8')
