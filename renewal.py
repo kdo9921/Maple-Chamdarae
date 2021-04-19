@@ -1,7 +1,7 @@
 import requests
 import os
 from bs4 import BeautifulSoup
-req = requests.get('https://maple.gg/u/apteryxchan')
+req = requests.get('https://maple.gg/u/Chamdarae')
 html = req.text
 soup = BeautifulSoup(html, 'html.parser')
 basic_info = soup.select('.user-summary-item')
