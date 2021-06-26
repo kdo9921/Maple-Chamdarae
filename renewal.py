@@ -7,6 +7,7 @@ soup = BeautifulSoup(html, 'html.parser')
 basic_info = soup.select('.user-summary-item')
 
 level = str(basic_info[0]).replace('<li class="user-summary-item">Lv.','').replace('</li>','')
+level = level.split('(')[0]
 popular = str(basic_info[2]).replace('<li class="user-summary-item"><span>인기도</span>\n<span>','').replace('</span></li>','')
 mureung_floor = (str(soup.select('.user-summary-floor')[0]).replace('<h1 class="user-summary-floor font-weight-bold">',''))[:2]
 mureung_time = str(soup.select('.user-summary-duration')[0]).replace('<small class="user-summary-duration">','').replace('</small>','')
