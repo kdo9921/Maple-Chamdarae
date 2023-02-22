@@ -36,7 +36,7 @@ body {
     text-align: center;
     margin: 10px 0 0 0;
     font-size: 50px;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 24px rgba(0, 0, 0, 0.9);
 }
 #bio {
     color: #e0e0e0;
@@ -46,7 +46,7 @@ body {
     margin: 8px 0 0 0;
     font-size: 20px;
     font-weight: 600;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
 }
 #about {
     display: flex;
