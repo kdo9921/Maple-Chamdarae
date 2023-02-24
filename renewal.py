@@ -36,12 +36,3 @@ data = {
 
 with open('data.json', 'w') as f:
     json.dump(data, f, indent=2)
-
-#path = os.path.dirname(os.path.abspath(__file__))
-#if os.path.isfile(path + '/data.js'):
-#    os.remove(path + '/data.js')
-#datajs = open(path + '/data.js', 'w', encoding='utf8')
-#data_str = 'var data = {\n\tlevel : "' + level + '",\n\tpopular : "' + popular + '",\n\tguild : ' + "'" + guild + "'" +',#\n\tmureung_floor : "' + mureung_floor + '",\n\tmureung_time : "' + mureung_time + '",\n\trank_world : "' + rank_world + '",#\n\trank_world_job : "' + rank_world_job + '",\n\trank_job : "' + rank_job + '",\n\tunion_tier : "' + union_tier + '",#\n\tunion_level : "' + union_level + '"\n};'
-#datajs.write(data_str)
-#datajs.close()
-
