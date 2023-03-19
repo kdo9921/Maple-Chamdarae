@@ -34,5 +34,10 @@ data = {
     "union_level" :union_level
 }
 
+try:
+    os.remove('data.json')
+except:
+    print('파일 없음')
+
 with open('data.json', 'w') as f:
     json.dump(data, f, indent=2)
