@@ -6,20 +6,19 @@ from bs4 import BeautifulSoup
 req = requests.get('https://maple.gg/u/Chamdarae')
 html = req.text
 soup = BeautifulSoup(html, 'html.parser')
-basic_info = soup.select('.user-summary-item')
 
-level = str(basic_info[0]).replace('<li class="user-summary-item">Lv.','').replace('</li>','')
+level = soup.select('#user-profile > section > div.row.row-normal > div.col-lg-8 > div > div.user-summary > ul > li:nth-child(2)')[0].string
 level = level.split('(')[0]
-popular = str(basic_info[2]).replace('<li class="user-summary-item"><span>인기도</span>\n<span>','').replace('</span></li>','')
-mureung_floor = (str(soup.select('.user-summary-floor')[0]).replace('<h1 class="user-summary-floor font-weight-bold">',''))[:2]
-mureung_time = str(soup.select('.user-summary-duration')[0]).replace('<small class="user-summary-duration">','').replace('</small>','')
-ranking = soup.select('.user-additional > div')
-guild = str(ranking[0]).replace('<div class="col-lg-2 col-md-4 col-sm-4 col-12 mt-3">\n<b class="d-inline-block d-sm-block">길드</b>\n','').replace('\n</div>','')
-rank_world = str(ranking[2]).replace('<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-3">\n<b>월드랭킹</b><br/>\n<span>','').replace('</span>\n</div>','')
-rank_world_job = str(ranking[3]).replace('<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-3">\n<b>직업랭킹(월드)</b><br/>\n<span>','').replace('</span>\n</div>','')
-rank_job = str(ranking[4]).replace('<div class="col-lg-2 col-md-4 col-sm-4 col-6 mt-3">\n<b>직업랭킹(전체)</b><br/>\n<span>','').replace('</span>\n</div>','')
-union_tier = str(soup.select('.user-summary-tier-string')[0]).replace('<div class="user-summary-tier-string font-weight-bold">','').replace('</div>','')
-union_level = str(soup.select('.user-summary-level')[0]).replace('<span class="user-summary-level">Lv.','').replace('</span>','')
+popular = soup.select('#user-profile > section > div.row.row-normal > div.col-lg-8 > div > div.user-summary > ul > li:nth-child(4) > span:nth-child(2)')[0].string
+mureung_floor = soup.select('#app > div.card.border-bottom-0 > div > section > div.row.text-center > div:nth-child(1) > section > div > div > div > h1')[0].string
+mureung_time = soup.select('#app > div.card.border-bottom-0 > div > section > div.row.text-center > div:nth-child(1) > section > div > div > div > small')[0].string
+guild = soup.select('#user-profile > section > div.row.row-normal > div.col-lg-8 > div > div.row.row-normal.user-additional > div:nth-child(1) > a')[0].string
+ranking = soup.select('#user-profile > section > div.row.row-normal > div.col-lg-8 > div > div.row.row-normal.user-additional > div:nth-child(2) > span')[0].string
+rank_world = soup.select('#user-profile > section > div.row.row-normal > div.col-lg-8 > div > div.row.row-normal.user-additional > div:nth-child(3) > span')[0].string
+rank_world_job = soup.select('#user-profile > section > div.row.row-normal > div.col-lg-8 > div > div.row.row-normal.user-additional > div:nth-child(4) > span')[0].string
+rank_job = soup.select('#user-profile > section > div.row.row-normal > div.col-lg-8 > div > div.row.row-normal.user-additional > div:nth-child(5) > span')[0].string
+union_tier = soup.select('#app > div.card.border-bottom-0 > div > section > div.row.text-center > div:nth-child(3) > section > div > div > div')[0].string
+union_level = soup.select('#app > div.card.border-bottom-0 > div > section > div.row.text-center > div:nth-child(3) > section > div > div > span')[0].string
 
 data = {
     "level" : level,
